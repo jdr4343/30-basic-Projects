@@ -28,16 +28,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var lapsTableView: UITableView!
     
     
+    
     //수명 주기
     override func viewDidLoad() {
         super.viewDidLoad()
         //버튼을 동그랗게 변경
-        let CircleBtn: UIButton = {
-            let button = UIButton()
-            
+        let CircleBtn: (UIButton) -> Void = { button in
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.backgroundColor = UIColor.white
         }
+        CircleBtn(lapBtn)
+        CircleBtn(startBtn)
+        
+        startBtn.isEnabled = false
+        
+        lapsTableView.delegate = self
+        lapsTableView.dataSource = self
     }
+    
 
 
 }
-
+//확장자로 델리게이트와 데이터소스 연결
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        laps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "lapsCell", for: indexPath)
+        //라벨에 태그 되어 있는 넘버로 연결
+        if let labelNum = cell.viewWithTag(11) as? UILabel {
+          labelNum.text = "Lap \(laps.count - (indexPath as IndexPath).row)"
+        }
+        if let labelTimer = cell.viewWithTag(12) as? UILabel {
+        labelTimer.text = laps[laps.count - (indexPath as IndexPath).row - 1]
+        }
+        return cell
+    }
+    
+    
+}
