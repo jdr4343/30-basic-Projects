@@ -13,6 +13,7 @@
 		4038109226C49A8600CD042F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4038109026C49A8600CD042F /* Main.storyboard */; };
 		4038109426C49A8700CD042F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4038109326C49A8700CD042F /* Assets.xcassets */; };
 		4038109726C49A8700CD042F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4038109526C49A8700CD042F /* LaunchScreen.storyboard */; };
+		4038109F26C4A80900CD042F /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038109E26C4A80900CD042F /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4038109326C49A8700CD042F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4038109626C49A8700CD042F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4038109826C49A8700CD042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4038109E26C4A80900CD042F /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4038108A26C49A8600CD042F /* AppDelegate.swift */,
 				4038108C26C49A8600CD042F /* SceneDelegate.swift */,
 				4038108E26C49A8600CD042F /* ViewController.swift */,
+				4038109E26C4A80900CD042F /* Stopwatch.swift */,
 				4038109026C49A8600CD042F /* Main.storyboard */,
 				4038109326C49A8700CD042F /* Assets.xcassets */,
 				4038109526C49A8700CD042F /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				4038108F26C49A8600CD042F /* ViewController.swift in Sources */,
 				4038108B26C49A8600CD042F /* AppDelegate.swift in Sources */,
 				4038108D26C49A8600CD042F /* SceneDelegate.swift in Sources */,
+				4038109F26C4A80900CD042F /* Stopwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
