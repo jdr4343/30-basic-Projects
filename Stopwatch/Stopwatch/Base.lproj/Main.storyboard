@@ -67,22 +67,22 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lapsCell" rowHeight="54" id="ETJ-u8-K4Q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lapCell" rowHeight="54" id="ETJ-u8-K4Q">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ETJ-u8-K4Q" id="W9a-eD-gi5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6w-k33">
-                                                    <rect key="frame" x="65" y="16" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6w-k33">
+                                                    <rect key="frame" x="65" y="16" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.097030026749999998" green="0.094986548690000006" blue="0.24228430740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-R6-Xbf">
-                                                    <rect key="frame" x="306" y="16" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-R6-Xbf">
+                                                    <rect key="frame" x="306" y="16" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -93,41 +93,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="207" translatesAutoresizingMaskIntoConstraints="NO" id="peI-V3-DjY">
-                                <rect key="frame" x="69.5" y="326" width="275" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-EB-6vj">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Lap"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-Oe-sTx">
-                                        <rect key="frame" x="237" y="0.0" width="38" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Start">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-EB-6vj">
+                                <rect key="frame" x="78" y="322" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Lap"/>
+                                <connections>
+                                    <action selector="lapResetTimer:" destination="Ijl-bx-0fm" eventType="touchUpInside" id="23Q-y8-qdo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPQ-FS-Kwb">
+                                <rect key="frame" x="309" y="322" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPauseTimer:" destination="Ijl-bx-0fm" eventType="touchUpInside" id="IaD-G6-wGE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qwa-vN-FY8"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="47S-fC-A3c" firstAttribute="leading" secondItem="Qwa-vN-FY8" secondAttribute="leading" id="Fil-ro-Adn"/>
                             <constraint firstItem="47S-fC-A3c" firstAttribute="trailing" secondItem="Qwa-vN-FY8" secondAttribute="trailing" id="MKs-7C-V8v"/>
-                            <constraint firstItem="peI-V3-DjY" firstAttribute="top" secondItem="Qwa-vN-FY8" secondAttribute="top" constant="238" id="Ta3-wa-emt"/>
                             <constraint firstItem="47S-fC-A3c" firstAttribute="top" secondItem="Htu-LC-tCQ" secondAttribute="top" id="qpq-Ke-Lgz"/>
-                            <constraint firstItem="peI-V3-DjY" firstAttribute="centerX" secondItem="Htu-LC-tCQ" secondAttribute="centerX" id="uMk-8P-Vjk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stopwatch" id="Jf9-wL-8fd"/>
                     <connections>
-                        <outlet property="lapBtn" destination="Xxp-EB-6vj" id="77a-AO-jtP"/>
-                        <outlet property="lapLabel" destination="sI2-7P-OLt" id="Wqb-fh-Tni"/>
-                        <outlet property="lapsTableView" destination="mZw-GG-Fqe" id="TAe-W0-wgc"/>
-                        <outlet property="startBtn" destination="rvQ-Oe-sTx" id="1Vq-Ym-FPA"/>
-                        <outlet property="timeLabel" destination="MgT-Ta-gQ0" id="1b3-yG-4BC"/>
+                        <outlet property="lapRestButton" destination="Xxp-EB-6vj" id="wfa-0w-Fx7"/>
+                        <outlet property="lapTimerLabel" destination="sI2-7P-OLt" id="xcy-a6-6Ij"/>
+                        <outlet property="lapsTableView" destination="mZw-GG-Fqe" id="e1B-A5-ocV"/>
+                        <outlet property="playPauseButton" destination="mPQ-FS-Kwb" id="7xf-Zz-G8F"/>
+                        <outlet property="timerLabel" destination="MgT-Ta-gQ0" id="Q52-Mv-w5H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9q-mm-Y0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
